@@ -1,7 +1,7 @@
 # Interactive Visualization of Cultural Dataset | CASA, UCL
 
 ## **Project Overview**
-This repository contains the notes and codes that were used to build an interactive spatial web platform for Spatial Data Capture module at CASA, UCL.
+This repository contains the notebooks that were used to build an interactive spatial web platform for Spatial Data Capture module at CASA, UCL.
 The aim of the project is to define patterns in MoMA's art collection though “creative visualization”. To bridge the scholar field and the cultural institution, this project intents to:
 1)	Display the distribution of created art objects per nation over time;
 2)	Illustrate gender proportion in of the collection;
