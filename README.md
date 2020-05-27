@@ -1,5 +1,5 @@
 # **Project Overview**
-The following files and codes are
+
 
 **Website:** dev.spatialdatacapture.org%2F~ucfnclu
 
