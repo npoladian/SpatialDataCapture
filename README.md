@@ -1,4 +1,4 @@
-# Interactive visualization of Cultural Dataset | CASA, UCL
+# Interactive Visualization of Cultural Dataset | CASA, UCL
 
 ## **Project Overview**
 This repository contains the notes and codes that were used to build an interactive spatial web platform for Spatial Data Capture module at CASA, UCL.
