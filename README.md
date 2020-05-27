@@ -1,7 +1,13 @@
 # **Project Overview**
-
+This repository contains the notes and codes that were used to build an interactive spatial web platform for Spatial Data Capture module at CASA, UCL.
+The aim of the project is to define patterns in MoMA's art collection though “creative visualization”. To bridge the scholar field and the cultural institution, this project intents to:
+1)	Display the distribution of created art objects per nation over time;
+2)	Illustrate gender proportion in of the collection;
+3)	Explore nation-to-nation collaboration trends and progress;
+4)	Observe color usage trends in art creation in different countries throughout history of the collection;  
 
 **Website:** dev.spatialdatacapture.org%2F~ucfnclu
+**MoMA's Dataset:** github.com/MuseumofModernArt/collection.git
 
 # **Document Overview**
 
