@@ -1,0 +1,32 @@
+.Text *::-webkit-scrollbar {
+    width: 0;
+}
+
+
+
+.Content .Text{
+    position:absolute;
+    width: 25%;
+    top:50px;
+    right:0; 
+    background-color: #a55407;
+    color: #f1ece4;
+    text-align:justify;
+    height:700px;
+}
+  
+
+#Text1, #Text2{
+    position:absolute;
+    top: 0px;
+    height: 700px;
+    padding:20px 20px 20px 20px;
+    overflow: auto;
+}
+
+
+#Text2,#Text3{
+    display:none;
+}
+
+

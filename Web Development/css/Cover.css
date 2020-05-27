@@ -1,0 +1,131 @@
+
+#navbar{
+    position:absolute;
+    height:60px;
+    padding:10px;
+    z-index: 40;
+    width:40%;
+    color:#f1ece4;
+    font-family: "Franklin Gothic";
+    outline:none;
+    text-decoration: none;
+}
+#navbar a{
+    color: #f1ece4;
+    font-size:40px;
+    text-decoration:inherit;
+    font-weight: bold;
+    margin-right:5%;
+} 
+
+#navbar hr{
+    background:linear-gradient(to right, #f1ece4 40%, #454a6400);
+    margin:2px 0px 5px 0;
+    border: 0;
+    height: 2.5px;
+    width:70%;
+}
+
+
+.Cover #Intro{
+    position:absolute;
+    width:100%;
+    height:450px;
+    z-index: 30;
+    background-color: #454a64;
+    overflow: hidden;
+}
+
+#IntroTitle{
+    position: absolute;
+    background: transparent;
+    color:#f1ece4;
+    height: 150px;
+    width:100%;
+    padding:0px;
+    top:80px;
+    text-align: center;
+    overflow: hidden;
+}
+
+#IntroTitle p{
+    position: absolute;
+    background: transparent;
+    color:#f1ece4;
+    left:15%;
+    padding-top:5px;
+    width:70%;
+    text-align: justify;
+}
+
+#F1, #F2, #F3{
+    position: absolute;
+    background: transparent;
+    color:#f1ece4;
+    height: 50px;
+    width:20%;
+    padding:5px 0 5px 0px;
+    outline:none;
+    text-align: center;
+}
+
+#F1 h1, #F2 h1, #F3 h1{
+    font-size: 20px;
+}
+
+#F1 h4,#F2 h4, #F3 h4{
+    font-size: 12px;
+    font-weight:200;
+}
+
+
+#F1 p,#F2 p, #F3 p{
+    position: absolute;
+
+    padding-top:10px;
+    width:100%;
+    height:100px;
+    font-size: 14px;
+    color:#f1ece4;
+    text-align:justify;
+}
+
+
+
+
+
+
+
+#F1:hover, #F2:hover, #F3:hover{
+    background:linear-gradient(to right, #454a6400, #f1ece4 50%, #454a6400) !important;;
+    color:#454a64 !important;
+}
+
+
+#F1{
+    top: 250px;
+    left: 15%;
+}
+
+#F2{
+    top: 250px;
+    left: 40%;
+}
+
+#F3{
+    top: 250px;
+    left: 65%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

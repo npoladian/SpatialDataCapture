@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+}
+
+body{
+  font-family: 'Abhaya Libre';
+}
+
+.Cover{
+  position:relative;
+  height:450px;
+  padding:0;
+}
+
+.Content{
+  position:relative;
+  padding:0;
+  height:750px;
+}
+
+.Analysis{
+  position:relative;
+  padding:0;
+  height:500px;
+}
+
+.MoreInfo{
+  position:relative;
+  padding:0;
+  height:200px;
+}
+
+.share-icons a{
+  text-decoration: none;
+}
+
+.share-icons {
+  position:fixed;
+  top: 10px;
+  right: 15px;
+  z-index: 40;
+  font-size: 25px;
+}
+
+.share-icons .icon {
+  opacity: 0.4;
+  color: #f1ece4;
+}
+
+.share-icons .icon:hover {
+  opacity: 1;
+}
+
+
+.S1, .S2, .S3{
+  position:absolute;
+  top:7.5px;
+  height:15px;
+  width:15%;
+  text-align:center;
+  color:#454a64;
+  font-weight:900;
+  overflow: hidden;
+}
+
+
+
+.S1{
+  left:30%;
+}
+
+.S2{
+  left:45%;
+}
+
+.S3{
+  left:60%;
+}
+
+.S1:hover, .S2:hover, .S3:hover{
+  color:#a55407;
+}
+
+
+.C1, .C2, .C3{
+  position:absolute;
+  top:7.5px;
+  height:15px;
+  width:15%;
+  text-align:center;
+  color:#454a64;
+  font-weight:900;
+  overflow: hidden;
+}
+
+.C1{
+  left:20%;
+}
+
+.C2{
+  left:45%;
+}
+
+.C3{
+  left:70%;
+}
+
+.C1:hover, .C2:hover, .C3:hover{
+  color:#a55407;
+}
