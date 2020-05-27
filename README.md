@@ -1,4 +1,4 @@
-# Interactive Visualization of Cultural Dataset | CASA, UCL
+# Interactive Visualization of Cultural Dataset: MoMA’s Collection | CASA, UCL
 
 ## **Project Overview**
 This repository contains the notebooks and further web development components that were used to build an interactive spatial web platform for Spatial Data Capture module at CASA, UCL.
