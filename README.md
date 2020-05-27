@@ -9,7 +9,7 @@ The aim of the project is to define patterns in MoMA's art collection though “
 **Website:** dev.spatialdatacapture.org%2F~ucfnclu
 **MoMA's Dataset:** github.com/MuseumofModernArt/collection.git
 
-# **Document Overview**
+# **Repository Overview**
 
 ## 1) Web Development
 The file contants the html, css and js codes that were used to construct the website. 
