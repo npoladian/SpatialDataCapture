@@ -10,7 +10,7 @@ The aim of the conducted work is to unleash the potential of the cultural datase
 
 - **Final Website:** http://dev.spatialdatacapture.org/~ucfnclu/
 - **Leveraged MoMA's Dataset:** www.github.com/MuseumofModernArt/collection.git
-- **EGS Documentation:** http://dev.spatialdatacapture.org:8709/
+- **API Documentation:** http://dev.spatialdatacapture.org:8709/
 
 ## **Repository Overview**
 
