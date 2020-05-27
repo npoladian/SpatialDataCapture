@@ -9,7 +9,7 @@ The aim of the project is to define patterns in MoMA's art collection though “
 4)	Observe color usage trends in art creation in different countries throughout history of the collection;  
 
 - **Website:** dev.spatialdatacapture.org%2F~ucfnclu
-- **MoMA's Dataset:** github.com/MuseumofModernArt/collection.git
+- **MoMA's Dataset:** www.github.com/MuseumofModernArt/collection.git
 
 ## **Repository Overview**
 
