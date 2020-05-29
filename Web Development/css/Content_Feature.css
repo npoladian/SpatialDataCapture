@@ -30,16 +30,35 @@
 
 
 #Map1, #Map2, #Map3{
-    z-index: 10;
     position:absolute;
     height:700px;
     width:100%;
 }
 
+#Map1,#Text1{
+   z-index: 14;
+}
+#Text1,#Text2{
+    background-color: #a55407;
+}
 
+#Map2,#Text2{
+    z-index: 12;
+}
+
+#Map3{
+    z-index: 10;
+    width:133.33%;
+}
+#Text3{z-index: 11;}
  
 /* Feature 1 */
-
+#Circle{
+    z-index: 15;
+    position:absolute;
+    height:700px;
+    width:100%;
+}
 
 .TimeLine {
     position:absolute;
@@ -182,10 +201,8 @@
     background-color: transparent;
     position: absolute;
     padding: 20px;
-    color: #f1ece4;
-    border-width: 15px;
-    border-color: maroon;
-    border-style: solid;
+    width: 100%;
+    z-index: 11;
 }
 #scrollable h2{
     display: inline;
@@ -203,16 +220,12 @@
 
   
 #scrollable a, #scrollable a:link,#scrollable a:visited{
-   color: #f1ece4;
    text-decoration: none;
 }
  
 .RGBtext{
     position: absolute;
-    top:650px;
-    height: 50px;
-    color: #f1ece4;
-    padding: 5px 20px 5px 20px;
+    padding: 5px 0px 5px 0px;
 }
 
 .RGBtext a:link{
@@ -225,9 +238,9 @@
    overflow:scroll;
    position: relative;
    top: 150px;
-   height: 500px;
+   height: 550px;
    margin: 0;
-   
+   z-index: 11;
    /*border: 1px dimgrey solid;
    background-color: green;*/
 }
@@ -238,13 +251,14 @@
  
 #imagegallery img{
    width: 100%;
+   height: auto;
    vertical-align: top;
    display: inline-block;
 }
 
 #imagegallery a{
     width: 50%;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     display: inline-block;
  }
   
