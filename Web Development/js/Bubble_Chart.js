@@ -1,4 +1,4 @@
-$(document).ready(function () {
+var BubblePlotting = function () {
     var options = {
         chart: {
             renderTo: 'Bubble',
@@ -112,4 +112,4 @@ $(document).ready(function () {
             };
         }
     });
-});
+};

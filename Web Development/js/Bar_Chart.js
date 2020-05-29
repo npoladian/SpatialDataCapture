@@ -1,4 +1,4 @@
-$(document).ready(function () {
+var BarPlotting = function () {
     var Continent = [
         'South America', 'Australia', 'Africa', 'Asia',
         'Central America', 'Europe', 'North America'
@@ -126,4 +126,4 @@ $(document).ready(function () {
         }
     });
 
-});
+};

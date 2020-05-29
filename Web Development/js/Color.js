@@ -72,7 +72,7 @@ function allcolorsforcountry(country) {
         $.each(data, function (u) {
             //console.log(data[u]['Colors']);
             if (data[u]['Colors'] == color) {
-                $("#scrollable").css('border-color', data[u]['Colors'])
+                $("#scrollable").css('background-color', data[u]['Colors'])
                 //console.log(data[u]['Colors']);
                 $("select").append(
                     '<option value="' + parseInt(u) + '" selected>' + data[u]['Colors'] + '</option>'
@@ -93,17 +93,22 @@ function countryandcolor(country, color) {
         console.log("getting for " + country + " and " + color + " from server and fillig the gallery!");
         $("#imagegallery").empty();
 
-        if (data.length >= 1) {
+        if (data.length > 1) {
             $(".Imgtext").text(
-                "There are " + data.length + " artworks matching this color for " + country + "."
+              "There are " + data.length + " artworks matching this color for " + country
             )
-        };
-        // if (color == "black") {
+          } else if (data.length == 1) {
+            $(".Imgtext").text(
+              "There is " + data.length + " artwork matching this color for " + country
+            )
+          };
+        if (color == "black") {
 
-        //     $("#scrollable").css('color', '#f1ece4');
-        // } else {
-        //     $("#scrollable").css('color', '#454a64');
-        // };
+            $("#scrollable").css('color', '#f1ece4');
+            $("#scrollable").css('color', '#f1ece4');
+        } else {
+            $("#scrollable").css('color', 'black');
+        };
 
         $.each(data.slice(0, 300), function (i, v) {
             if (v != undefined) {
@@ -112,7 +117,7 @@ function countryandcolor(country, color) {
                 );
             };
         });
-        when_images_loaded($("#imagegallery"),waterfallHandler)
+        //when_images_loaded($("#imagegallery"),waterfallHandler)
     });
 }
 
@@ -124,7 +129,7 @@ function getcolors() {
         $.each(data, function (u) {
 
             if (data[u]['Colors'] == color) {
-                $("#scrollable").css('border-color', data[u]['Colors'])
+                $("#scrollable").css('background-color', data[u]['Colors'])
 
                 $("select").append(
                     '<option value="' + parseInt(u) + '" selected>' + data[u]['Colors'] + '</option>'
@@ -161,7 +166,7 @@ function when_images_loaded($img_container, callback) {
 $(".colors").change(function () {
     var selectedColor = $(this).children("option:selected").text();
 
-    $("#scrollable").css('border-color', selectedColor)
+    $("#scrollable").css('background-color', selectedColor)
 
     //allcolorsforcountry(country);
     console.log("getting artworks in " + country + " with " + selectedColor + " in them");

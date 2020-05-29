@@ -6,9 +6,10 @@ var FeaNum = ["1", "2", "3"];
 $(document).ready(function () {
     $.each(CoverSL, function (i1, v1) {
         $(v1)[0].addEventListener('click', function () {   // mind the difference of jquery object and dom object
-            if(i1 == 1){ CollaborationPlotting()};
             
             // the selected
+            if (i1 == 0) { Bubble_Mapping(2000, "All") }else{d3.select("#Map1").select("svg").remove();};
+            if (i1 == 1) { CollaborationPlotting() };
             $(v1).css({ "background": "linear-gradient(to right, #454a6400, #f1ece4 50%, #454a6400)", "color": "#454a64" });
 
 
@@ -48,7 +49,7 @@ $(document).ready(function () {
     $.each(FeaNum, function (i1, v1) {
         $("#F" + v1)[0].addEventListener('click', function () {
             // the selected
-            if (v1 == "3") { setTimeout(waterfallHandler, 300); };
+            //if (v1 == "3") { setTimeout(waterfallHandler, 300); };
             $("#Feature" + v1).css("display", "block");
             $("#Text" + v1).css("display", "block");
             // the rest
@@ -96,7 +97,8 @@ $(document).ready(function () {
         $.each(FeaNum, function (i1, v1) {
             document.getElementsByClassName("S" + v1)[i].addEventListener('click', function () {
                 // the selected
-                if(i1 == 1){ CollaborationPlotting()};
+                if (i1 == 0) { Bubble_Mapping(2000, "All") }else{d3.select("#Map1").select("svg").remove();};
+                if (i1 == 1) { CollaborationPlotting() };
                 $(".S" + v1).css("color", "#a55407");
                 $("#F" + v1).css({ "background": "linear-gradient(to right, #454a6400, #f1ece4 50%, #454a6400)", "color": "#454a64" });
 
@@ -119,7 +121,7 @@ $(document).ready(function () {
         $.each(FeaNum, function (i1, v1) {
             document.getElementsByClassName("S" + v1)[i].addEventListener('click', function () {
                 // the selected
-                if (v1 == "3") { setTimeout(waterfallHandler, 300); };
+                //if (v1 == "3") { setTimeout(waterfallHandler, 300); };
                 $("#Feature" + v1).css("display", "block");
                 $("#Text" + v1).css("display", "block");
                 // the rest
@@ -142,6 +144,9 @@ $(document).ready(function () {
         $.each(FeaNum, function (i1, v1) {
             document.getElementsByClassName("C" + v1)[i].addEventListener('click', function () {
                 // the selected
+                if (i1 == 0) { StreamPlotting(); };
+                if (i1 == 1) { BarPlotting(); };
+                if (i1 == 2) { BubblePlotting(); };
                 $(".C" + v1).css("color", "#a55407");
                 $("#Me" + v1).css("display", "block");
                 $("#Cht" + v1).css("display", "block");

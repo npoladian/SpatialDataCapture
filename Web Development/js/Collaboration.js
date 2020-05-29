@@ -32,29 +32,18 @@ function fillChart(pathID) {
         chart: {
             renderTo: 'Line',
             type: 'line',
-            backgroundColor: "#454a6467",
             style: {
                 fontFamily: "Abhaya Libre",
             }
         },
 
-        colors: ["#d38236"],
-
         title: {
             // the chart title is set to the name of countries in each pair
             text: '{0}-{1}'.replace('{0}', edgeArray[pathID]['options']['country1']).replace('{1}', edgeArray[pathID]['options']['country2']),
-            style: {
-                color: '#f1ece4',
-                fontSize: "15px"
-            }
         },
         subtitle: {
             // the chart subtitle is set to the total number of collaboration of each pair
             text: '{0} Collaborations'.replace('{0}', edgeArray[pathID]['options']['Total']),
-            style: {
-                color: '#f1ece4',
-                fontSize: "10px"
-            }
         },
 
         plotOptions: {
@@ -72,28 +61,12 @@ function fillChart(pathID) {
 
         yAxis: {
             title: {
-                text: 'Number of Collaborations',
-                style: {
-                    color: '#f1ece4',
-                }
-            },
-            labels: {
-                style: {
-                    color: '#f1ece4'
-                }
+                text: 'Number of Collaborations'
             }
         },
         xAxis: {
             title: {
-                text: 'Year',
-                style: {
-                    color: '#f1ece4',
-                }
-            },
-            labels: {
-                style: {
-                    color: '#f1ece4'
-                }
+                text: 'Year'
             }
         },
         series: [{
@@ -125,7 +98,6 @@ function fillChart(pathID) {
 
     });
 }
-
 
 // API URL
 var collabURL = 'http://dev.spatialdatacapture.org:8709/Assessmen/Collaboration/Collab';
@@ -168,7 +140,7 @@ var CollaborationPlotting = function () {
 
             // setting the path options and attributes
             var pathOptions = {
-                color: '#454a646c',
+                color: 'rgba(0,0,0,0.5)',
                 weight: v.scaledTotal,
                 pathID: v.collab_id,
                 country1: v.country1,
@@ -180,7 +152,7 @@ var CollaborationPlotting = function () {
 
             // setting the animation for the paths
             if (typeof document.getElementById('Map2').animate === "function") {
-                var durationBase = 9000;
+                var durationBase = 5000;
                 pathOptions.animate = {
                     duration: durationBase,
                     easing: 'ease-in-out',
@@ -194,7 +166,7 @@ var CollaborationPlotting = function () {
                     'M', [v.country1_lat, v.country1_lon],
                     'Q', [v.midpoint_lat, v.midpoint_lon],
                     [v.country2_lat, v.country2_lon]
-                ], pathOptions).bindTooltip("<b>" + v.country1 + "----" + v.country2 + "</b><br>" + "Collaboration Times: " + v.Total, { className: 'Tooltip' });;
+                ], pathOptions);
 
             // setting a mouseover event
             curvedPath.on('mouseover', function (e) {
@@ -204,14 +176,14 @@ var CollaborationPlotting = function () {
                 // change the opacity of all of the paths in the edges array to 0.1 (almost transparent)
                 edges.eachLayer(function (layer) {
                     layer.setStyle({
-                        color: '#454a6465'
+                        color: 'rgba(0,0,0,0.1)'
                     });
 
                 });
 
                 // change the opacity of this specific path to 1 (totally opaque)
                 this.setStyle({
-                    color: '#a5540780'
+                    color: 'rgba(0,0,0,1)'
                 });
 
                 // storing the path id for easy access
@@ -219,10 +191,10 @@ var CollaborationPlotting = function () {
 
                 // creating a popup which is located on the mouseover event latlng location
                 // the popup centent is the names of the countries in each pair
-                // var popup = L.popup()
-                //     .setLatLng(e.latlng)
-                //     .setContent('<p class="popuplink" onclick="fillChart({2})">{0}-{1}</p>'.replace('{0}', this['options']['country1']).replace('{1}', this['options']['country2']).replace('{2}', thisPath))
-                //     .openOn(map2);
+                var popup = L.popup()
+                    .setLatLng(e.latlng)
+                    .setContent('<p class="popuplink" onclick="fillChart({2})">{0}-{1}</p>'.replace('{0}', this['options']['country1']).replace('{1}', this['options']['country2']).replace('{2}', thisPath))
+                    .openOn(map2);
             });
 
             // setting a click event
@@ -235,7 +207,7 @@ var CollaborationPlotting = function () {
             curvedPath.on('mouseout', function () {
                 edges.eachLayer(function (layer) {
                     layer.setStyle({
-                        color: '#454a646c'
+                        color: 'rgba(0,0,0,0.5)'
                     });
 
                 });

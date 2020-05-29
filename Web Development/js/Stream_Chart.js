@@ -1,4 +1,4 @@
-$(document).ready(function () {
+var StreamPlotting = function () {
     var Countries = [
         'United States', 'France', 'Germany', 'United Kingdom', 'Spain', 'Italy', 'Russia', 'Japan', 'Switzerland', 'Netherlands',
         'Argentina', 'Belgium', 'Mexico', 'Austria', 'Canada', 'Brazil', 'Hungary', 'Colombia', 'Czech Republic', 'Chile'
@@ -97,5 +97,6 @@ $(document).ready(function () {
             series: Series
         });
     });
-});
+};
 
+StreamPlotting()
